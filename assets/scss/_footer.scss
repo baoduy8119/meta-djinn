@@ -1,0 +1,98 @@
+footer {
+    position: relative;
+    min-height: 930px;
+    background: url('../images/footer-bg.png');
+    background-size: cover;
+    @media screen and (max-width: 767px) {
+        min-height: 670px;
+        &.section {
+            padding: 40px 20px;
+        }
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 250px;
+        background: linear-gradient(180deg, rgba(21, 21, 21, 0) 0%, #00031c 100%);
+        transform: rotate(180deg);
+        @media screen and (max-width: 767px) {
+            height: 130px;
+        }
+    }
+    .footer-bottom {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 125px 0;
+        background: linear-gradient(180deg, #010d2d 0%, rgba(21, 21, 21, 0) 100%);
+        @media screen and (max-width: 767px) {
+            padding: 50px 10px;
+        }
+        .social-list {
+            font-size: 30px;
+            margin-top: 30px;
+            .social-item {
+                position: relative;
+                margin: 0 10px;
+            }
+        }
+    }
+    .left-block {
+        @media screen and (min-width: 992px) {
+            position: absolute;
+            top: -50px;
+            left: 0;
+        }
+    }
+    .right-block {
+        @media screen and (max-width: 767px) {
+            margin-top: 30px;
+            text-align: left;
+        }
+    }
+}
+.info-list {
+    margin-top: 80px;
+    text-align: left;
+    @media screen and (max-width: 767px) {
+        margin-top: 40px;
+    }
+    .info-item {
+        margin: 40px 0;
+        a {
+            color: white;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        i {
+            font-size: 30px;
+            padding-right: 20px;
+            text-align: center;
+            @media screen and (max-width: 767px) {
+                font-size: 24px;
+                padding-right: 10px;
+            }
+        }
+    }
+}
+.contact-list {
+    display: inline-block;
+    .contact-item {
+        display: flex;
+        align-items: center;
+        color: white;
+        i {
+            font-size: 30px;
+            padding-right: 10px;
+        }
+    }
+}
+.copy-right {
+    margin-top: 25px;
+    font-weight: 400;
+}

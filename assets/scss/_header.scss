@@ -1,0 +1,73 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: rgba(0, 4, 36, 0.5);
+    mix-blend-mode: normal;
+    backdrop-filter: blur(20px);
+    font-size: 16px;
+    z-index: 100;
+    @media screen and (max-width: 991px) {
+        height: 70px;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(0.25turn, #0b3ae2, #2ae390, #f0b919, #fe2924);
+    }
+    .nav-link {
+        color: white;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+    .logo {
+        img {
+            width: 101px;
+            height: 41px;
+        }
+    }
+    .nav-bar {
+        flex: 0 0 calc(100% - 131px);
+        @media screen and (max-width: 1024px) {
+            text-align: right;
+            flex-direction: column;
+            justify-content: start;
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 300px !important;
+            transform: translateX(100%);
+            background: rgba(2, 6, 31, 0.95);
+            transition: all 0.3s;
+            z-index: 999;
+            &.show {
+                transform: translateX(0);
+            }
+            .nav {
+                display: block;
+            }
+            li {
+                margin: 25px 10px;
+            }
+        }
+    }
+}
+.toggle-menu {
+    color: white;
+    font-size: 30px;
+}
+.btn-close {
+    position: absolute;
+    top: 28px;
+    left: 20px;
+    color: white;
+    font-size: 30px;
+}

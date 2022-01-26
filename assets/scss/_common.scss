@@ -1,0 +1,81 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #00031c;
+    color: white;
+    letter-spacing: 1px;
+    @media screen and (max-width: 575px) {
+        font-size: 14px;
+    }
+}
+.container {
+    @media screen and (min-width: 1400px) {
+        max-width: 1200px !important;
+    }
+}
+.title {
+    font-size: 32px;
+    font-weight: 800;
+    font-style: italic;
+    @media screen and (min-width: 992px) {
+        font-size: 48px;
+    }
+    .sub-title {
+        @media screen and (min-width: 992px) {
+            font-size: 36px;
+        }
+    }
+}
+.sub-title {
+    font-size: 20px;
+    @media screen and (min-width: 992px) {
+        font-size: 24px;
+        font-style: italic;
+    }
+}
+.section-title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    font-size: 30px;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    @media screen and (max-width: 767px) {
+        font-size: 22px;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        border-radius: 2px;
+        background: linear-gradient(135deg, #fe2924, #f0b919, #2ae390, #0b3ae2);
+    }
+}
+.sink-effect {
+    @media screen and (min-width: 1400px) {
+        top: 0;
+        transition: top 0.3s;
+        &:hover {
+            cursor: pointer;
+            top: -10px;
+        }
+    }
+}
+.section {
+    padding: 130px 0;
+    text-align: center;
+    @media screen and (max-width: 991px) {
+        padding: 40px;
+    }
+}
+button,
+button:active,
+button:focus {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
